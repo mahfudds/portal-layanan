@@ -1,82 +1,90 @@
+# 🏛️ Portal Layanan – Kemenag Jawa Timur
 
-# 🌟 PORTAL LAYANAN - Kemenag Kabupaten / Kota Provinsi Jawa Timur
+**Portal Layanan** adalah aplikasi berbasis web yang dirancang untuk memudahkan akses publik terhadap berbagai layanan di lingkungan Kementerian Agama Kabupaten/Kota Provinsi Jawa Timur. Website ini merupakan bagian dari inisiatif transparansi dan digitalisasi layanan publik.
 
-**BERSINAR** (Budaya Kerja Spesifik, Inovatif, Responsif, dan Ramah) adalah portal layanan online resmi dari Kantor Kementerian Agama Provinsi Jawa Timur, sebagai bagian dari reformasi birokrasi menuju Wilayah Bebas dari Korupsi (WBK) dan Wilayah Birokrasi Bersih Melayani (WBBM) ([youtube.com][1]).
-
-## 🎯 Fitur Utama
-
-* **Permohonan layanan publik**: Ajukan secara daring untuk berbagai layanan agama .
-* **Informasi kegiatan**: Terbitkan berita dan unggahan kegiatan program .
-* **Platform satu pintu (one‑stop portal)**: Semua layanan, berita, dan informasi kontak resmi.
-
-## 🧩 Teknologi & Struktur
-
-Repository ini menyimpan:
+## 🗂️ Struktur Proyek
 
 ```
-bersinar/
-├── public/           ── berkas HTML statis, aset CSS/JS, gambar
-├── src/              ── kode frontend (ditulis dengan HTML, CSS, JS atau kerangka seperti React/Vue)
-├── server/           ── (opsional) backend/API (Node.js, PHP, dsb.)
-├── data/             ── konfigurasi dan contoh konten
-└── README.md
+Portal-Layanan/
+├── assets/
+│   ├── css/                  # Gaya dan tema tampilan
+│   ├── icons/                # Ikon antarmuka
+│   ├── images/               # Gambar statis
+│   └── js/                   # Skrip JavaScript kustom
+├── modules/
+│   ├── app/                  # Modul inti aplikasi
+│   ├── calendar/             # Fitur kalender
+│   ├── echarts/              # Visualisasi data dengan ECharts
+│   ├── fancybox/             # Popup image viewer
+│   ├── flickity/             # Carousel slider
+│   ├── fonts/                # Font dan ikon
+│   ├── jquery/               # Library jQuery
+│   ├── masonry/              # Layout grid responsif
+│   ├── materialize/          # Framework Materialize CSS
+│   ├── pace/                 # Progress bar
+│   └── perfect-scrollbar/    # Scrollbar kustom
+├── index.html                # Halaman utama portal
+├── alamat.html               # Informasi alamat dan kontak
+├── layanan.html              # Daftar layanan publik
+├── tblayanan.json            # Data layanan dalam format JSON
+├── tbmainmenu.json           # Struktur menu utama
+├── pwabuilder-sw.js          # Service worker untuk PWA
 ```
 
-## 🛠️ Instalasi & Pengembangan
+## 🚀 Fitur Unggulan
 
-1. **Clone repositori**
+* **Layanan Digital**: Akses berbagai layanan keagamaan tanpa harus datang langsung ke kantor.
+* **Desain Responsif**: Tampilan optimal di desktop dan perangkat mobile.
+* **Progressive Web App (PWA)**: Dukungan offline dan instalasi layaknya aplikasi native.
+* **Visualisasi dan Navigasi Modern**: Termasuk ECharts, carousel Flickity, dan layout dinamis masonry.
 
-   ```bash
-   git clone https://github.com/username/portal-layanan.git
-   cd PORTAL-LAYANAN
-   ```
-2. **Instal dependencies** (jika proyek menggunakan package manager):
+## 🛠️ Cara Menjalankan Secara Lokal
 
-   ```bash
-   npm install
-   ```
-3. **Menjalankan server development**
+1. **Clone atau unduh repositori**
 
    ```bash
-   npm run dev
+   git clone https://github.com/namamu/portal-layanan.git
+   cd portal-layanan
    ```
-4. **Build untuk produksi**
 
-   ```bash
-   npm run build
-   ```
-5. **Konfigurasi server**: Pastikan domain `bersinar.kemenagjember.id` diarahkan ke build output (folder `public/` atau hasil build).
+2. **Buka file `index.html` di browser**
+   Tidak memerlukan backend; cukup buka di browser:
 
-## 📁 Struktur Proyek
+   * Buka `index.html` langsung di browser
+   * Atau gunakan live server:
 
-* `public/` – aset statis (HTML, CSS, JS, gambar).
-* `src/` – source code interaktif/SPA (jika digunakan).
-* `server/` – logic server/API (opsional).
-* `data/` – file konfigurasi dan konten.
-* `README.md` – dokumentasi ini.
+     ```bash
+     npx serve .
+     ```
+
+3. **PWA Support (opsional)**
+   Untuk testing *offline mode* dan PWA:
+
+   * Pastikan file `pwabuilder-sw.js` aktif
+   * Jalankan di server (bukan `file://`) agar service worker berfungsi
+
+## 📦 Ketergantungan (Built-in)
+
+* [Materialize CSS](https://materializecss.com/)
+* [jQuery](https://jquery.com/)
+* [ECharts](https://echarts.apache.org/)
+* [Flickity](https://flickity.metafizzy.co/)
+* [Masonry.js](https://masonry.desandro.com/)
+* [Pace.js](http://github.hubspot.com/pace/)
 
 ## 🤝 Kontribusi
 
-1. Buat branch baru: `git checkout -b fitur/namamu`.
-2. Tambahkan fitur atau perbaikan.
-3. Commit perubahan: `git commit -m "Menambahkan fitur X"`.
-4. Push dan buka Pull Request (PR).
-5. Tinjauan dan diskusi oleh tim pengelola.
+Silakan fork proyek ini dan kirim Pull Request untuk:
 
-Mohon diperhatikan pedoman *code style*, dokumentasi inline, dan tes (jika ada).
+* Penambahan fitur
+* Perbaikan tampilan
+* Optimalisasi PWA
+* Validasi data JSON
 
+## 📄 Lisensi
 
----
-
-## 📝 Catatan Tambahan
-
-* Website portal layanan merupakan bagian dari kampanye KBM dan WBK, sebagai bentuk komitmen pelayanan publik yang inovatif dan responsif ([youtube.com][1]).
-* Pastikan memperbarui konten kampung binaan dan dokumentasi kegiatan secara berkala.
+Proyek ini berada di bawah lisensi **MIT** – silakan digunakan, dimodifikasi, dan disebarluaskan sesuai kebutuhan.
 
 ---
 
-### 🚀 Ayo berkontribusi untuk mendukung budaya layanan publik yang **Bersih, Inovatif, Responsif, dan Ramah**!
-
----
-
-Silakan sesuaikan URL GitHub dan instruksi teknis sesuai stack yang sebenarnya digunakan dalam proyek. Semoga bermanfaat! 😊
+Silakan ganti bagian URL GitHub atau bagian kontribusi sesuai dengan siapa yang akan mengelola repositori ini. Jika perlu ditambahkan badge, CI/CD, atau dokumentasi API (jika nanti ada backend), README ini bisa diperluas. Mau sekalian saya buatkan versi markdown siap tempel di GitHub?
