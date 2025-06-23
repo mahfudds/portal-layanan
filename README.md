@@ -1,16 +1,13 @@
-Berikut adalah draft **README.md** yang bisa kamu gunakan di repositori GitHub untuk website [bersinar.kemenagjember.id](https://bersinar.kemenagjember.id). README ini mencakup deskripsi, instalasi, arsitektur, serta panduan pengembangan dan kontribusi.
 
----
+# 🌟 PORTAL LAYANAN - Kemenag Kabupaten / Kota Provinsi Jawa Timur
 
-# 🌟 BERSINAR - Kemenag Kabupaten Jember
-
-**BERSINAR** (Budaya Kerja Spesifik, Inovatif, Responsif, dan Ramah) adalah portal layanan online resmi dari Kantor Kementerian Agama Kabupaten Jember, sebagai bagian dari reformasi birokrasi menuju Wilayah Bebas dari Korupsi (WBK) dan Wilayah Birokrasi Bersih Melayani (WBBM) ([youtube.com][1]).
+**BERSINAR** (Budaya Kerja Spesifik, Inovatif, Responsif, dan Ramah) adalah portal layanan online resmi dari Kantor Kementerian Agama Provinsi Jawa Timur, sebagai bagian dari reformasi birokrasi menuju Wilayah Bebas dari Korupsi (WBK) dan Wilayah Birokrasi Bersih Melayani (WBBM) ([youtube.com][1]).
 
 ## 🎯 Fitur Utama
 
-* **Permohonan layanan publik**: Ajukan secara daring untuk berbagai layanan agama di Kabupaten Jember ([facebook.com][2]).
-* **Informasi kegiatan**: Terbitkan berita dan unggahan kegiatan program “Kampung Harmoni BERSINAR” ([kemenagjember.id][3]).
-* **Platform satu pintu (one‑stop portal)**: Semua layanan, berita, dan informasi kontak resmi Kemenag Jember.
+* **Permohonan layanan publik**: Ajukan secara daring untuk berbagai layanan agama .
+* **Informasi kegiatan**: Terbitkan berita dan unggahan kegiatan program .
+* **Platform satu pintu (one‑stop portal)**: Semua layanan, berita, dan informasi kontak resmi.
 
 ## 🧩 Teknologi & Struktur
 
@@ -30,8 +27,8 @@ bersinar/
 1. **Clone repositori**
 
    ```bash
-   git clone https://github.com/username/bersinar.git
-   cd bersinar
+   git clone https://github.com/username/portal-layanan.git
+   cd PORTAL-LAYANAN
    ```
 2. **Instal dependencies** (jika proyek menggunakan package manager):
 
@@ -73,7 +70,7 @@ Mohon diperhatikan pedoman *code style*, dokumentasi inline, dan tes (jika ada).
 
 ## 📝 Catatan Tambahan
 
-* Website BERSINAR merupakan bagian dari kampanye KBM dan WBK, sebagai bentuk komitmen pelayanan publik yang inovatif dan responsif ([youtube.com][1]).
+* Website portal layanan merupakan bagian dari kampanye KBM dan WBK, sebagai bentuk komitmen pelayanan publik yang inovatif dan responsif ([youtube.com][1]).
 * Pastikan memperbarui konten kampung binaan dan dokumentasi kegiatan secara berkala.
 
 ---
