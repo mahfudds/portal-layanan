@@ -1,0 +1,24 @@
+[
+  {"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+  {"type":"database","name":"ptsp-main"},
+  {"type":"table","name":"tbmainmenu","database":"ptsp-main","data":[
+    {"id":"0","menuKode":"00","menuSlug":"berita","menuJudul":"BERITA","menuSubjudul":"Berita dan Informasi Kemenag Ngawi","menuImg":"rss.svg","menuAktif":"0","menuHref":"https:\/\/kemenagngawi.or.id","menuColor":"","menuData":"0"},
+    {"id":"1","menuKode":"01","menuSlug":"sekjen","menuJudul":"TATA USAHA","menuSubjudul":"Layanan Informasi Sekretariat, Layanan Umum, Kepegawaian dan Keuangan","menuImg":"banking.png","menuAktif":"1","menuHref":"","menuColor":"","menuData":"0"},
+    {"id":"2","menuKode":"02","menuSlug":"bimas-islam","menuJudul":"BIMAS ISLAM","menuSubjudul":"Layanan Informasi Bimbingan Masyarakat Islam","menuImg":"mosque.png","menuAktif":"1","menuHref":"","menuColor":"","menuData":"0"},
+    {"id":"3","menuKode":"03","menuSlug":"haji-umrah","menuJudul":"PENYELENGGARAAN HAJI DAN UMRAH","menuSubjudul":"Layanan Informasi Haji dan Umrah","menuImg":"kaaba.png","menuAktif":"1","menuHref":"","menuColor":"","menuData":"0"},
+    {"id":"4","menuKode":"04","menuSlug":"pendma","menuJudul":"PENDIDIKAN MADRASAH","menuSubjudul":"Layanan Informasi Pendidikan Madrasah","menuImg":"quran3.png","menuAktif":"1","menuHref":"","menuColor":"","menuData":"0"},
+    {"id":"5","menuKode":"05","menuSlug":"pais","menuJudul":"PENDIDIKAN AGAMA ISLAM","menuSubjudul":"Layanan Informasi Urusan Agama Islam","menuImg":"koran.png","menuAktif":"1","menuHref":"","menuColor":"","menuData":"0"},
+    {"id":"6","menuKode":"06","menuSlug":"pd-pontren","menuJudul":"PENDIDIKAN DINIYAH DAN PONDOK PESANTREN","menuSubjudul":"Layanan Informasi Pendidikan Diniyah dan Pondok Pesantren","menuImg":"shalat.png","menuAktif":"1","menuHref":"","menuColor":"","menuData":"0"},
+    {"id":"7","menuKode":"07","menuSlug":"penyelenggara-zakat-wakaf","menuJudul":"PENYELENGGARA ZAKAT DAN WAKAF","menuSubjudul":"Layanan Informasi Penyelenggaraan Zakat Wakaf","menuImg":"zakat.png","menuAktif":"1","menuHref":"","menuColor":"","menuData":"0"},
+    {"id":"8","menuKode":"08","menuSlug":"layanan-kristen","menuJudul":"PEMBIMAS KRISTEN","menuSubjudul":"Bimbingan Masyarakat Kristen Kementerian Agama Provinsi Jawa Timur","menuImg":"bible.png","menuAktif":"1","menuHref":"","menuColor":"","menuData":"0"},
+    {"id":"9","menuKode":"09","menuSlug":"layanan-katolik","menuJudul":"PEMBIMAS KATOLIK","menuSubjudul":"Bimbingan Masyarakat Katolik Kementerian Agama Provinsi Jawa Timur","menuImg":"jesus-statue.png","menuAktif":"1","menuHref":"","menuColor":"","menuData":"0"},
+    {"id":"10","menuKode":"10","menuSlug":"layanan-hindu","menuJudul":"PEMBIMAS HINDU","menuSubjudul":"Bimbingan Masyarakat Hindu Kementerian Agama Provinsi Jawa Timur","menuImg":"vihara.png","menuAktif":"1","menuHref":"","menuColor":"","menuData":"0"},
+    {"id":"11","menuKode":"11","menuSlug":"layanan-buddha","menuJudul":"PEMBIMAS BUDDHA","menuSubjudul":"Bimbingan Masyarakat Buddha Kementerian Agama Provinsi Jawa Timur","menuImg":"buddha.png","menuAktif":"1","menuHref":"","menuColor":"","menuData":"0"},
+    {"id":"12","menuKode":"12","menuSlug":"pengadaan","menuJudul":"UNIT PENGADAAN","menuSubjudul":"Layanan Informasi Pengadaan","menuImg":"study.png","menuAktif":"0","menuHref":null,"menuColor":null,"menuData":"2"},
+    {"id":"14","menuKode":"14","menuSlug":"lacak-layanan","menuJudul":"LACAK LAYANAN","menuSubjudul":"Lacak Layanan Untuk Mengetahui Posisi Layanan Anda","menuImg":"schedule.png","menuAktif":"1","menuHref":"https:\/\/ptspjatim.kemenag.go.id/index.php/halaman/lacak-layanan","menuColor":"","menuData":"0"},
+    {"id":"15","menuKode":"15","menuSlug":"buku-tamu","menuJudul":"BUKU TAMU","menuSubjudul":"Silakan Isi Buku Tamu Online","menuImg":"notebook.png","menuAktif":"0","menuHref":"#","menuColor":"bukutamu","menuData":"0"},
+    {"id":"16","menuKode":"16","menuSlug":"survey","menuJudul":"SURVEY","menuSubjudul":"Survey Kepuasan Layanan Masyarakat","menuImg":"survey.png","menuAktif":"1","menuHref":"https://tally.so/r/wbA5lZ","menuColor":"","menuData":"0"},
+    {"id":"17","menuKode":"17","menuSlug":"inovasi","menuJudul":"INOVASI","menuSubjudul":"Beragam Inovasi Layanan Digital","menuImg":"inovasi.png","menuAktif":"1","menuHref":"https://jember.kemenag.go.id/inovasi","menuColor":"","menuData":"0"},
+    {"id":"18","menuKode":"18","menuSlug":"aduan","menuJudul":"ADUAN","menuSubjudul":"Pojok Pengaduan Masyarakat","menuImg":"aduan.png","menuAktif":"1","menuHref":"https://jember.kemenag.go.id/pojok-dumas","menuColor":"","menuData":"0"}
+  ]}
+]

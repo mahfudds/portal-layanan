@@ -1,0 +1,1130 @@
+
+<!DOCTYPE html>
+<html lang="en" class=" ">
+
+<head>
+  <!-- 
+         * @Package: Bersinar PWA Mobile App 
+         * @Author: themepassion
+         * @Version: 1.0
+        -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bersinar</title>
+  <meta content="Bersinar PWA Mobile App" name="description" />
+  <meta content="themepassion" name="author" />
+
+
+  <!-- App Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/icons/57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/icons/60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/icons/76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/icons/120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/icons/144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/icons/152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icons/192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/icons/512x512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/icons/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon.png">
+  <link rel="manifest" href="assets/images/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+  <!-- CORE CSS FRAMEWORK - START -->
+  <link href="assets/css/preloader.css" type="text/css" rel="stylesheet" media="screen" />
+
+  <link href="modules/materialize/materialize.min.css" type="text/css" rel="stylesheet" media="screen" />
+  <link href="modules/fonts/mdi/appicon/appicon.css" type="text/css" rel="stylesheet" media="screen" />
+  <link href="modules/fonts/mdi/materialdesignicons.min.css" type="text/css" rel="stylesheet" media="screen" />
+  <link href="modules/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen" />
+
+
+  <!-- CORE CSS FRAMEWORK - END -->
+
+  <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+  <link href="modules/fancybox/jquery.fancybox.min.css" rel="stylesheet" type="text/css" media="screen"/>  <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+  <!-- CORE CSS TEMPLATE - START -->
+
+  
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen" id="main-style" />
+  <!-- CORE CSS TEMPLATE - END -->
+
+  <style>
+   .icon-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 16px;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+    height: 100%;
+  }
+
+  .icon-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .icon-area {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .icon-area img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-top: 10px;
+  }
+
+  .title-area {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    word-break: break-word;
+    white-space: normal;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .text-area {
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.4;
+    word-break: break-word;
+    white-space: normal;
+  }
+    @media (max-width: 992px) {
+    .col {
+      max-width: 33.3333%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .col {
+      max-width: 50%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .col {
+      max-width: 100%;
+    }
+  }
+ 
+</style>
+
+<style>
+  .search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-wrapper input[type="search"] {
+    flex: 1;
+    padding-right: 48px;
+    margin: 0;
+  }
+
+ .search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 0 16px;
+  min-width: unset;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  /* Tambahkan ini: */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .search-btn i {
+    font-size: 1.1rem;
+  }
+}
+
+
+  .search-btn i {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+  .autocomplete-items {
+    position: absolute;
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+    /* border: 1px solid #ccc; */
+    z-index: 99;
+    width: 100%;
+    margin-top: -10px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .autocomplete-items li {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  .autocomplete-items li:hover {
+    background-color: #eee;
+  }
+</style>
+
+<style>
+  #layananSearch {
+    padding-left: 1rem !important;
+
+  }
+.carousel.carousel-slider {
+  position: relative;
+  height: auto !important;
+  padding-top: 30%; /* proporsi tinggi terhadap lebar */
+}
+
+.carousel.carousel-slider .carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.carousel.carousel-slider .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+</style>
+
+
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+
+<body class=" menu-full header-image html"  data-header="light" data-footer="light"  data-header_align="app"  data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left" data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light"  >
+    <div class="preloader-background">
+      <div class="preloader-wrapper">
+        <div class="configure-border-1">  
+        </div>  
+        <div class="configure-border-2">
+        </div> 
+      </div>
+    </div>
+  
+
+
+  <!-- SIDEBAR - START -->
+
+<!-- MAIN MENU - START -->
+
+
+
+<!-- MAIN MENU - END -->
+
+
+
+<!--  SIDEBAR - END --><!-- SIDEBAR - START -->
+
+<!-- MAIN MENU - START -->
+
+
+
+<!-- MAIN MENU - END -->
+
+
+
+<!--  SIDEBAR - END -->
+
+<!-- START navigation -->
+<nav class="fix_topscroll logo_on_fixed  topbar navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="index.html" class=" brand-logo " >Bersinar</a>    
+      
+      <a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large "><i class="mdi mdi-arrow-left" data-page=""></i></a>
+    
+    
+    <a href="#" data-target="slide-nav" class="waves-effect waves-circle navicon sidenav-trigger show-on-large"><i class="app-icon-menu1"></i></a>
+
+    <a href="#" data-target="slide-settings" class="waves-effect waves-circle navicon right sidenav-trigger show-on-large"><i class="app-icon-equalizer"></i></a>
+
+    <a href="#" data-target="" class="waves-effect waves-circle navicon right nav-site-mode show-on-large"><i class="app-icon-contrast"></i></a>
+    <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+  </div>
+</nav>
+<ul id="slide-nav" class="sidenav sidemenu">
+  <li class="user-wrap">
+    <div class="user-view row">
+     <img src="assets/images/logobersinar2.png" height="100px">
+    </div>
+  </li>
+
+
+<li class="menulinks">
+  <ul class="collapsible" id="dynamic-menu">
+    <!-- Dynamic menu from tbmainmenu.json will be injected here -->
+  </ul>
+</li>
+
+
+
+      <li class="sep-wrap"><div class="divider"></div></li>
+   
+
+
+<li class="copy-spacer"></li>
+<li class="copy-wrap">
+  <div class="copyright">&copy; Copyright @ themepassion</div>
+
+  </ul>
+  <!-- END navigation -->
+
+
+  <ul id="slide-settings" class="sidenav sidesettings ">
+    <li class="menulinks">
+      <ul class="collapsible">
+      <!-- Menu Settings Start-->
+      <li class="sh-wrap"><div class="subheader">Themes</div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="red">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-intermediate red-text text-lighten-2"></i>
+                        <span class="title">Red</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="orange">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline deep-orange-text text-lighten-2"></i>
+                        <span class="title">Orange</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="blue">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline blue-text text-lighten-2"></i>
+                        <span class="title">Blue</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="teal">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline teal-text text-lighten-2"></i>
+                        <span class="title">Teal</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="pink">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline pink-text text-lighten-2"></i>
+                        <span class="title">Pink</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="light-green">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline light-green-text text-lighten-2"></i>
+                        <span class="title">Light Green</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="purple">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline purple-text text-lighten-2"></i>
+                        <span class="title">Violet</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="green">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline green-text text-lighten-2"></i>
+                        <span class="title">Green</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings active" data-type="theme" data-value="deep-purple">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline deep-purple-text text-lighten-2"></i>
+                        <span class="title">Purple</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="amber">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline amber-text"></i>
+                        <span class="title">Yellow</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="indigo">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline indigo-text text-lighten-2"></i>
+                        <span class="title">Indigo</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="blue-grey">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline blue-grey-text text-lighten-2"></i>
+                        <span class="title">Blue Grey</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="brown">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline brown-text text-lighten-2"></i>
+                        <span class="title">Brown</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="cyan">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline cyan-text text-lighten-2"></i>
+                        <span class="title">Cyan</span>  </a>
+                        </div></li>
+                    <li class="lvl1  theme">
+                    <div class="waves-effect appsettings " data-type="theme" data-value="grey">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline grey-text text-darken-2"></i>
+                        <span class="title">Black</span>  </a>
+                        </div></li><li class="sep-wrap"><div class="divider"></div></li><li class="sh-wrap"><div class="subheader">Site Mode</div></li>
+                    <li class="lvl1  site_mode">
+                    <div class="waves-effect appsettings active" data-type="site_mode" data-value="light">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-intermediate"></i>
+                        <span class="title">Light Mode</span>  </a>
+                        </div></li>
+                    <li class="lvl1  site_mode">
+                    <div class="waves-effect appsettings " data-type="site_mode" data-value="dark">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Dark Mode</span>  </a>
+                        </div></li><li class="sep-wrap"><div class="divider"></div></li><li class="sh-wrap"><div class="subheader">Header Style</div></li>
+                    <li class="lvl1  header">
+                    <div class="waves-effect appsettings active" data-type="header" data-value="light">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-intermediate"></i>
+                        <span class="title">Light Header</span>  </a>
+                        </div></li>
+                    <li class="lvl1  header">
+                    <div class="waves-effect appsettings " data-type="header" data-value="dark">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Dark Header</span>  </a>
+                        </div></li>
+                    <li class="lvl1  header">
+                    <div class="waves-effect appsettings " data-type="header" data-value="colored">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Colored Header</span>  </a>
+                        </div></li><li class="sep-wrap"><div class="divider"></div></li><li class="sh-wrap"><div class="subheader">Header Alignment</div></li>
+                    <li class="lvl1  header_align">
+                    <div class="waves-effect appsettings " data-type="header_align" data-value="left">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-intermediate"></i>
+                        <span class="title">Left Align Header</span>  </a>
+                        </div></li>
+                    <li class="lvl1  header_align">
+                    <div class="waves-effect appsettings " data-type="header_align" data-value="center">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Center Align Header</span>  </a>
+                        </div></li>
+                    <li class="lvl1  header_align">
+                    <div class="waves-effect appsettings " data-type="header_align" data-value="right">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Right Align Header</span>  </a>
+                        </div></li>
+                    <li class="lvl1  header_align">
+                    <div class="waves-effect appsettings active" data-type="header_align" data-value="app">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">App Based Align Header</span>  </a>
+                        </div></li><li class="sep-wrap"><div class="divider"></div></li><li class="sh-wrap"><div class="subheader">Menu Style</div></li>
+                    <li class="lvl1  menu">
+                    <div class="waves-effect appsettings active" data-type="menu" data-value="light">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-intermediate"></i>
+                        <span class="title">Light Menu</span>  </a>
+                        </div></li>
+                    <li class="lvl1  menu">
+                    <div class="waves-effect appsettings " data-type="menu" data-value="dark">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Dark Menu</span>  </a>
+                        </div></li>
+                    <li class="lvl1  menu">
+                    <div class="waves-effect appsettings " data-type="menu" data-value="colored">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Colored Menu</span>  </a>
+                        </div></li><li class="sep-wrap"><div class="divider"></div></li><li class="sh-wrap"><div class="subheader">Menu Icons</div></li>
+                    <li class="lvl1  menu_icons">
+                    <div class="waves-effect appsettings active" data-type="menu_icons" data-value="on">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-intermediate"></i>
+                        <span class="title">Menu Icons Show</span>  </a>
+                        </div></li>
+                    <li class="lvl1  menu_icons">
+                    <div class="waves-effect appsettings " data-type="menu_icons" data-value="off">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Menu Icons Hide</span>  </a>
+                        </div></li><li class="sep-wrap"><div class="divider"></div></li><li class="sh-wrap"><div class="subheader">Page Footer Style</div></li>
+                    <li class="lvl1  footer">
+                    <div class="waves-effect appsettings active" data-type="footer" data-value="light">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-intermediate"></i>
+                        <span class="title">Light Footer</span>  </a>
+                        </div></li>
+                    <li class="lvl1  footer">
+                    <div class="waves-effect appsettings " data-type="footer" data-value="dark">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Dark Footer</span>  </a>
+                        </div></li>
+                    <li class="lvl1  footer">
+                    <div class="waves-effect appsettings " data-type="footer" data-value="colored">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Colored Footer</span>  </a>
+                        </div></li><li class="sep-wrap"><div class="divider"></div></li><li class="sh-wrap"><div class="subheader">Page Footer Type</div></li>
+                    <li class="lvl1  footer_type">
+                    <div class="waves-effect appsettings " data-type="footer_type" data-value="minimal">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-intermediate"></i>
+                        <span class="title">Minimal Footer</span>  </a>
+                        </div></li>
+                    <li class="lvl1  footer_type">
+                    <div class="waves-effect appsettings active" data-type="footer_type" data-value="left">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Left Aligned Footer</span>  </a>
+                        </div></li>
+                    <li class="lvl1  footer_type">
+                    <div class="waves-effect appsettings " data-type="footer_type" data-value="center">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Centered Footer</span>  </a>
+                        </div></li><li class="sep-wrap"><div class="divider"></div></li><li class="sh-wrap"><div class="subheader">Fixed Footer Menu</div></li>
+                    <li class="lvl1  footer_menu">
+                    <div class="waves-effect appsettings active" data-type="footer_menu" data-value="show">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-intermediate"></i>
+                        <span class="title">Show Fixed Footer Menu</span>  </a>
+                        </div></li>
+                    <li class="lvl1  footer_menu">
+                    <div class="waves-effect appsettings " data-type="footer_menu" data-value="hide">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Hide Fixed Footer Menu</span>  </a>
+                        </div></li><li class="sep-wrap"><div class="divider"></div></li><li class="sh-wrap"><div class="subheader">Fixed Footer Menu Style</div></li>
+                    <li class="lvl1  footer_menu_style">
+                    <div class="waves-effect appsettings active" data-type="footer_menu_style" data-value="light">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-intermediate"></i>
+                        <span class="title">Light Fixed Menu</span>  </a>
+                        </div></li>
+                    <li class="lvl1  footer_menu_style">
+                    <div class="waves-effect appsettings " data-type="footer_menu_style" data-value="dark">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Dark Fixed Menu</span>  </a>
+                        </div></li>
+                    <li class="lvl1  footer_menu_style">
+                    <div class="waves-effect appsettings " data-type="footer_menu_style" data-value="colored">
+                        <a href="#!">
+                        <i class="mdi mdi-checkbox-blank-outline"></i>
+                        <span class="title">Colored Fixed Menu</span>  </a>
+                        </div></li>      <!-- Menu Settings End-->
+      </ul>
+    </li>
+  </ul>
+<div class="menu-close"><i class="mdi mdi-close"></i></div>
+
+<div class="content-area">
+
+  <div class="pagehead-bg   primary-bg" >
+    </div> 
+
+  <div class="container has-pagehead is-pagetitle">
+    <div class="section">
+      <h5 class="pagetitle">  <img src="assets/images/logobersinar2.png" height="100px"></h5>
+          </div>
+  </div>
+  
+
+
+
+
+<div class="container over p0 mb0">
+  <div class="section pt0 pb0">
+    <div class="carousel carousel-fullscreen carousel-slider">
+  <div class="carousel-item">
+    <img src="assets/images/1.png" alt="Slider 1">
+  </div>
+  <div class="carousel-item">
+    <img src="assets/images/2.png" alt="Slider 1">
+  </div>
+ <div class="carousel-item">
+    <img src="assets/images/3.png" alt="Slider 1">
+  </div>
+</div>
+
+  </div>
+</div>
+<style>
+  .carousel-item img {
+    width: 100% !important;
+    height: auto !important;
+    display: block; /* Hindari whitespace di bawah gambar */
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const elems = document.querySelectorAll('.carousel.carousel-slider');
+    M.Carousel.init(elems, {
+      fullWidth: true,
+      indicators: true,
+      duration: 500,     // kecepatan animasi: 0.5 detik
+      interval: 10000     // jeda antar slide otomatis: 4 detik
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <div class="section">
+    <div class="spacer"></div>
+    <div class="row ">
+                <div class="">        
+<!--   Icon Section   -->
+  <div class="search-bar">
+  <nav class="ui-forms">
+    <div class="nav-wrapper">
+      <form id="searchForm" onsubmit="return false;">
+        <div class="input-field search-wrapper">
+          <input id="layananSearch" type="search" placeholder="Cari Layanan" required>
+          <button id="btnCariLayanan" class="btn waves-effect waves-light search-btn" type="submit">
+           Cari
+          </button>
+        </div>
+      </form>
+    </div>
+  </nav>
+</div>
+
+<ul id="autocomplete-list" class="autocomplete-items"></ul>
+
+
+      <br>
+<div class="row" id="menu-container">
+
+ 
+</div> 
+ </div>
+    </div>
+    
+
+
+    
+<!-- <h5 class="center sec-tit">Our Mission</h5>
+<p class="center-align">Mobile applications often stand in contrast to desktop applications which run on desktop computers, and with web applications which run in mobile web browsers rather than directly on the mobile device.</p>
+<div class="center-align">
+  <a href="#!" class="btn btn-rounded">Know More</a>
+</div> -->
+<div class="spacer-large"></div>
+
+
+    </div>
+  </div>
+
+  
+
+  
+<div class="row primary-bg ">
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <h5 class="center bot-0 sec-tit white-text pad-15">Maklumat Layanan</h5>
+  <p class="center-align white-text pad-30">Dengan Ini Kami Menyatakan Sanggup Menyelenggarakan Pelayanan Sesuai Standar Pelayanan Yang Telah Ditetapkan Dan Apabila Tidak Menepati Janji Ini Kami Siap Menerima Sanksi Sesuai Peraturan Perundang-Undangan Yang Berlaku
+</p>
+<h5 class="center bot-0 sec-tit white-text pad-15">Kompensasi Layanan</h5>
+  <p class="center-align white-text pad-30">Seluruh Layanan Pada Kantor Kementerian Agama Kabupaten Jember Dilaksanakan Sesuai Maklumat Layanan Dan Standar Pelayanan Yang Berlaku. Apabila Layanan Yang Diberikan Tidak Sesuai, Maka Pemberi Layanan Siap Menerima Sanksi Sesuai Peraturan Yang Berlaku Dan Pengguna Layanan Berhak Untuk Menerima Layanan Tanpa Harus Antri Terlebih Dahulu
+</p>
+ 
+  <div class="spacer"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+        <div class="row ui-mediabox blogs blogs-boxed     " >
+          <div class="col-item ">
+              <div class="blog-wrap z-depth-1"> 
+                <div class="blog-img-wrap">
+                    <a class="img-wrap round" href="assets/images/blog-102.jpg" data-fancybox="images" data-caption="Make the best of your website campaign">
+                     <img alt="image" class="z-depth-1" style="width: 100%;" src="assets/images/pkatalokasi.png" />
+                    </a> 
+                  </div>
+                <div class="blog-info  boxed">
+                    <a href="ui-app-blog-item.html" >      
+                    <h5 class="title ">Pendampingan dan Konsultasi Anggaran pada Titik Lokasi </h5>
+                    </a>
+                    <p class="bot-0 text">merupakan inovasi layanan yang memberikan pendampingan langsung kepada pengelola keuangan di satuan kerja untuk meningkatkan kualitas pengelolaan anggaran, mengatasi keterbatasan sumber daya, dan memberikan solusi tepat waktu terhadap permasalahan anggaran di lingkungan Kementerian Agama Kabupaten Jember.</p>
+                    <a href="https://jember.kemenag.go.id/pakta-lokasi" class="btn btn-rounded teal">Lihat Selengkapnya</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="row ui-mediabox blogs blogs-boxed     " >
+          <div class="col-item  ">
+              <div class="blog-wrap z-depth-1"> 
+                <div class="blog-img-wrap">
+                    <a class="img-wrap round" href="assets/images/jalavisa.png" data-fancybox="images" data-caption="Make the best of your website campaign">
+                     <img alt="image" class="z-depth-1" style="width: 100%;" src="assets/images/jalavisa.png" />
+                    </a> 
+                  </div>
+                <div class="blog-info  boxed">
+                    <a href="ui-app-blog-item.html" >      
+                    <h5 class="title ">JALAVISA (Jemput Bola Layanan Bio Visa) </h5>
+                    </a>
+                    <p class="bot-0 text">adalah inovasi dari Kemenag Jember untuk membantu jemaah haji, khususnya lansia dan yang kesulitan teknologi, dalam proses pengajuan visa melalui aplikasi Saudi Visa Bio. Layanan ini dilakukan di lokasi terdekat seperti KUA atau KBIH guna mengatasi antrian panjang dan keterbatasan perangkat. Secara gratis, tim pendamping membantu proses biometrik (wajah dan sidik jari), mendata jemaah, serta memantau progres agar tidak ada jemaah yang tertinggal dalam tahapan visa.</p>
+                    <a href="https://jember.kemenag.go.id/jalavisa" class="btn btn-rounded teal">Lihat Selengkapnya</a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="spacer"></div>
+        <div class="row ui-mediabox blogs blogs-boxed     " >
+          <div class="col-item  ">
+              <div class="blog-wrap z-depth-1"> 
+                <div class="blog-img-wrap">
+                    <a class="img-wrap round" href="assets/images/pagarlapis.png" data-fancybox="images" data-caption="Make the best of your website campaign">
+                     <img alt="image" class="z-depth-1" style="width: 100%;" src="assets/images/pagarlapis.png" />
+                    </a> 
+                  </div>
+                <div class="blog-info  boxed">
+                    <a href="ui-app-blog-item.html" >      
+                    <h5 class="title ">PAGAR LAPIS (Pembinaan Agama Warga Lembaga Pemasyarakatan Terintegrasi) </h5>
+                    </a>
+                    <p class="bot-0 text">PAGAR LAPIS (Pembinaan Agama Warga Lembaga Pemasyarakatan Terintegrasi) merupakan inovasi Kementerian Agama Kabupaten Jember yang bekerja sama dengan Lapas Kelas 2A Jember untuk membina narapidana melalui program keagamaan seperti baca tulis Al-Qur’an, tahfidz, pengajaran fiqih dan tauhid, serta konsultasi rohani. Program ini bertujuan menciptakan suasana lapas yang lebih religius, tertib, dan harmonis, sekaligus mendorong perubahan perilaku positif narapidana. Melalui pendekatan khusus dan metode bertahap, PAGAR LAPIS membekali warga binaan dengan nilai-nilai spiritual sebagai bekal integrasi kembali ke masyarakat secara sehat dan bertanggung jawab..</p>
+                    <a href="https://jember.kemenag.go.id/pagar-lapis" class="btn btn-rounded teal">Lihat Selengkapnya</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>  
+
+
+  <div class="container">
+    <div class="section">
+
+    <div class="row ">
+                <div class=""><h5 class="bot-20 sec-tit center ">BERSINAR</h5>    <div class="spacer"></div>
+    <div class="spacer"></div>
+
+    
+<!--   Icon Section   -->
+<div class="row">
+    <div class="col s12 m12 l3">
+    <div class="icon-block overlay z-depth-1">
+      <div class="icon-area center primary-text"><i class="mdi mdi-account-check z-depth-1"></i></div>
+      <h6 class="title-area center">Bersih Melayani</h6>
+      <p class="text-area center">Komitmen memberikan layanan yang bebas dari korupsi, pungutan liar, dan penyalahgunaan wewenang.</p>
+    </div>
+  </div>
+
+    <div class="col s12 m12 l3">
+    <div class="icon-block overlay z-depth-1">
+      <div class="icon-area center primary-text"><i class="mdi mdi-account-heart z-depth-1"></i></div>
+      <h6 class="title-area center">Santun</h6>
+      <p class="text-area center">Menjaga etika, kesopanan, dan tata krama dalam tutur kata maupun sikap selama memberikan pelayanan.</p>
+    </div>
+  </div>
+
+    <div class="col s12 m12 l3">
+      <div class="icon-block overlay z-depth-1">
+        <div class="icon-area center primary-text"><i class="mdi mdi-book-plus z-depth-1"></i></div>
+        <h6 class="title-area center">Inovatif</h6>
+        <p class="text-area center">Terus berinovasi dengan memanfaatkan teknologi dan ide kreatif untuk meningkatkan efektivitas dan efisiensi layanan</p>
+      </div>
+      </div>
+
+        <div class="col s12 m12 l3">
+        <div class="icon-block overlay z-depth-1">
+          <div class="icon-area center primary-text"><i class="mdi mdi-calendar-multiple-check z-depth-1"></i></div>
+          <h6 class="title-area center">Akuntabel dan Ramah</h6>
+          <p class="text-area center">Setiap tindakan dan keputusan dalam pelayanan dapat dipertanggungjawabkan secara terbuka dan dapat diaudit.</p>
+        </div>
+      </div>
+  </div>
+
+
+    </div>
+    </div>
+    
+
+    
+
+
+
+
+  </div>
+</div>
+
+
+
+<footer class="page-footer center social-colored ">
+  <div class="container footer-content">
+    <div class="row">
+      <div class="">
+        <h5 class="logo">KANTOR KEMENTERIAN AGAMA KABUPATEN JEMBER</h5>
+        <p class="black-text">Jl. K.H. Wachid Hasyim No.01, Kaliwates, Jember Telp. / Fax. 08113656262 Email: kemenagjember@gmail.com</p>
+              </div>
+      <div class="link-wrap">
+
+                <ul class="social-wrap">
+          <li class="social">
+            <a class="" href="https://www.facebook.com/kementerianagama.kabupatenjember.7"><i class="mdi mdi-facebook"></i></a>
+            <a class="" href="https://www.instagram.com/kemenagjember/"><i class="mdi mdi-instagram"></i></a>
+            <a class="" href="https://x.com/kemenagjember"><i class="mdi mdi-twitter"></i></a>
+            <a class="" href="https://api.whatsapp.com/send?phone=https://wa.me/628113656262"><i class="mdi mdi-whatsapp"></i></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+  </div>
+
+</footer>
+
+
+
+<div class="backtotop">
+  <a class="btn-floating btn primary-bg">
+    <i class="mdi mdi-chevron-up"></i>
+  </a>
+</div>
+
+
+
+</div><!--.content-area-->
+
+<div class="footer-menu circular primary-bg">
+  <ul>
+      <li >
+      <a href="alamat.html" >      <i class="mdi mdi-map"></i>
+      <span>Alamat</span>
+      </a>    </li>
+        <li >
+      <a href="https://jember.kemenag.go.id/" >      <i class="mdi mdi-web"></i>
+      <span>Website</span>
+      </a>    </li>
+        <li >
+      <a href="/" >      <i class="mdi mdi-home-outline"></i>
+      <span>Beranda</span>
+      </a>    </li>
+        <li >
+      <a href="https://tally.so/r/wbA5lZ" >      <i class="mdi mdi-script"></i>
+      <span>Survey</span>
+      </a>    </li>
+        <li >
+      <a href="https://wa.me/628113656262" >      <i class="mdi mdi-whatsapp"></i>
+      <span>Hubungi</span>
+      </a>    </li>
+      
+  </ul>
+</div>
+
+<div id="layanan" class="modal teal lighten-1 white-text modal-fixed-footer full">
+  <div class="modal-content">
+    <h4 class="bot-20 sec-tit">Informasi Layanan</h4>
+    <div id="layananContent" class=""></div> <!-- ← taruh isi JSON di sini -->
+  </div>
+
+  <div class="modal-footer teal lighten-1 white-text">
+    <a href="#!" class="btn red modal-close waves-effect btn-flat white-text">Batal</a>
+    <a href="#!" target="_blank" id="btnAjukanLayanan" class="btn indigo modal-close waves-effect btn-flat white-text">Ajukan Layanan</a>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch('tbmainmenu.json')
+    .then(response => response.json())
+    .then(jsonData => {
+      const tableData = jsonData.find(entry => entry.type === "table" && entry.name === "tbmainmenu");
+      const menuData = tableData ? tableData.data : [];
+
+      const container = document.getElementById('menu-container');
+
+      menuData.forEach(menu => {
+        if (menu.menuAktif === "1") {
+          const col = document.createElement("div");
+          col.className = "col s6 m4 l4";
+
+          const href = (menu.menuHref && menu.menuHref.length > 3)
+            ? menu.menuHref
+            : `layanan.html?kode=${menu.menuKode}`;
+
+          col.innerHTML = `
+            <a href="${href}" class="">
+              <div class="icon-block overlay z-depth-1 primary-icon">
+                <div class="icon-area center primary-text">
+                  <img src="assets/icons/${menu.menuImg}" alt="${menu.menuJudul}">
+                </div>
+                <h6 class="text-area center">${menu.menuJudul}</h6>
+              </div>
+            </a>
+          `;
+          container.appendChild(col);
+        }
+      });
+    })
+    .catch(err => {
+      console.error("Gagal memuat menu JSON:", err);
+    });
+});
+</script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById('layananSearch');
+  const suggestionBox = document.getElementById('autocomplete-list');
+
+  fetch('tblayanan.json')
+    .then(res => res.json())
+    .then(json => {
+      const table = json.find(entry => entry.type === "table" && entry.name === "tblayanan");
+      const layananData = table?.data || [];
+
+      const layananJenisList = [...new Set(layananData
+        .filter(item => item.layananAktif === "1")
+        .map(item => item.layananJenis.toUpperCase()))];
+
+      input.addEventListener("input", function () {
+        const val = this.value.toUpperCase();
+        suggestionBox.innerHTML = "";
+
+        if (!val) return;
+
+        const filtered = layananJenisList.filter(l => l.includes(val));
+
+        filtered.forEach(match => {
+          const li = document.createElement("li");
+          li.textContent = match;
+          li.addEventListener("click", function () {
+            input.value = match;
+            suggestionBox.innerHTML = "";
+          });
+          suggestionBox.appendChild(li);
+        });
+      });
+
+      document.addEventListener("click", function (e) {
+        if (e.target !== input) suggestionBox.innerHTML = "";
+      });
+    })
+    .catch(err => console.error("Gagal memuat tblayanan.json:", err));
+});
+
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById('layananSearch');
+  const suggestionBox = document.getElementById('autocomplete-list');
+  const layananContent = document.getElementById('layananContent');
+
+  let layananData = [];
+
+  // Inisialisasi Modal Materialize
+  const modals = document.querySelectorAll('.modal');
+  M.Modal.init(modals);
+  const layananModal = M.Modal.getInstance(document.getElementById("layanan"));
+
+  // Load JSON
+  fetch('tblayanan.json')
+    .then(res => res.json())
+    .then(json => {
+      const table = json.find(entry => entry.type === "table" && entry.name === "tblayanan");
+      layananData = table?.data || [];
+
+      const jenisList = [...new Set(layananData
+        .filter(item => item.layananAktif === "1")
+        .map(item => item.layananJenis.toUpperCase()))];
+
+      input.addEventListener("input", function () {
+        const val = this.value.toUpperCase();
+        suggestionBox.innerHTML = "";
+
+        if (!val) return;
+
+        const filtered = jenisList.filter(l => l.includes(val));
+        filtered.forEach(match => {
+          const li = document.createElement("li");
+          li.textContent = match;
+          li.addEventListener("click", function () {
+            input.value = match;
+            suggestionBox.innerHTML = "";
+          });
+          suggestionBox.appendChild(li);
+        });
+      });
+
+      document.addEventListener("click", function (e) {
+        if (e.target !== input) suggestionBox.innerHTML = "";
+      });
+    });
+
+  // Tombol cari diklik
+  document.getElementById("btnCariLayanan").addEventListener("click", function () {
+  const keyword = input.value.trim().toUpperCase();
+  if (!keyword) return;
+
+  const found = layananData.find(
+    item => item.layananAktif === "1" && item.layananJenis.toUpperCase() === keyword
+  );
+
+  const modalContent = document.getElementById("layananContent");
+  const ajukanBtn = document.getElementById("btnAjukanLayanan");
+
+  if (found) {
+    // Tampilkan deskripsi layanan
+    modalContent.innerHTML = found.layananket +"<br><br>"|| "<p>Tidak ada deskripsi layanan.</p>";
+
+    // Set href Ajukan Layanan (jika layananView ada)
+    const layananView = found.layananView?.trim();
+    if (layananView) {
+      ajukanBtn.href = `https://ptspjatim.kemenag.go.id/index.php/layananv2/sekjen/${layananView}?tujuan=02150800000000`;
+    } else {
+      ajukanBtn.href = "#!";
+    }
+
+    layananModal.open();
+  } else {
+    modalContent.innerHTML = "<p>Layanan tidak ditemukan.</p>";
+    ajukanBtn.href = "#!";
+    layananModal.open();
+  }
+});
+
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const elems = document.querySelectorAll('.carousel.carousel-slider');
+  const instances = M.Carousel.init(elems, {
+    fullWidth: true,
+    indicators: true
+  });
+
+  // Hapus style height yang disisipkan Materialize
+  elems.forEach(el => {
+    el.style.height = null; // menghapus inline style="height:..."
+  });
+});
+
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch('tbmainmenu.json')
+    .then(res => res.json())
+    .then(json => {
+      const table = json.find(item => item.type === "table" && item.name === "tbmainmenu");
+      const menus = table?.data || [];
+      const menuList = document.getElementById("dynamic-menu");
+
+      menus
+        .filter(menu => menu.menuAktif === "1")
+        .forEach(menu => {
+          const li = document.createElement("li");
+          li.className = "lvl1";
+
+          const href = (menu.menuHref && menu.menuHref.length > 3)
+            ? menu.menuHref
+            : `layanan.html?kode=${menu.menuKode}`;
+
+          li.innerHTML = `
+            <div class="waves-effect index">
+              <a href="${href}">
+                <i class="mdi mdi-menu"></i>
+                <span class="title">${menu.menuJudul}</span>
+                <div class='lvl1-tag'>${menu.menuSubjudul}</div>
+              </a>
+            </div>
+          `;
+          menuList.appendChild(li); // Menambahkan, bukan mengganti
+        });
+    })
+    .catch(err => console.error("Gagal memuat menu:", err));
+});
+</script>
+
+
+
+
+
+
+<script src="assets/js/pwa.js"></script>
+
+<!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+
+<!-- CORE JS FRAMEWORK - START -->
+<script src="modules/jquery/jquery-2.2.4.min.js"></script>
+<script src="modules/materialize/materialize.js"></script>
+<script src="modules/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="assets/js/variables.js"></script>
+<!-- CORE JS FRAMEWORK - END -->
+
+
+<!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+<script src="modules/fancybox/jquery.fancybox.min.js" ></script>
+<script src="assets/js/common.js"></script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+
+<!-- CORE TEMPLATE JS - START -->
+<script src="modules/app/init.js"></script>
+<script src="modules/app/settings.js"></script>
+
+<script src="modules/app/scripts.js"></script>
+
+<!-- END CORE TEMPLATE JS - END -->
+
+
+<script src="assets/js/preloader.js"></script>
+
+</body>
+
+</html>
